@@ -46,12 +46,12 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 
 DATABASES = {
     'default': {
-        'ENGINE': env("DJANGO_POSTGRES", default="django.db.backends.postgresql_psycopg2"),
-        'NAME': env("POSTGRES_NAME", default="postgresdb"),
-        'USER': env("POSTGRES_USER", default="postgres"),
-        'PASSWORD': env("POSTGRES_PASSWORD", default="postgres"),
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE':"django.db.backends.postgresql_psycopg2",
+        'NAME':"ferdb",
+        'USER':"postgres",
+        'PASSWORD':"postgres",
+        'HOST':'localhost',
+        'PORT':'',
     }
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
