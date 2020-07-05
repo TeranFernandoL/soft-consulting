@@ -53,7 +53,7 @@ THIRD_PARTY_APPS = [
     'drf_yasg',
 ]
 LOCAL_APPS = [
-
+    'apps.users',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -166,6 +166,7 @@ ADMINS = [
     ("""Luis Fernando Teran Poma""", 'fernand.teran96@gmail.com'),
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
+AUTH_USER_MODEL = 'users.User'
 MANAGERS = ADMINS
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',

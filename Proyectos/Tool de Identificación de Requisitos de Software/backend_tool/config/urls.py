@@ -38,7 +38,10 @@ urlpatterns = [
                   # Django Admin, use {% url 'admin:index' %}
                   path(settings.ADMIN_URL, admin.site.urls),
                   # User management
-
+                  path(
+                      "api/v1/users/",
+                      include("apps.users.urls", namespace="users"),
+                  ),
                   re_path(r'^swagger(?P<format>\.json|\.yaml)/$', schema_view.without_ui(cache_timeout=None),
                           name='schema-json'),
                   path("swagger/", schema_view.with_ui('swagger', cache_timeout=None), name='schema-swagger-ui'),
