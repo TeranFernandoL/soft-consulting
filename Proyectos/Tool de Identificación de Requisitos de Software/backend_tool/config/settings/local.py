@@ -1,5 +1,4 @@
 from .base import *
-from .base import env
 
 DEBUG = True
 SECRET_KEY = env('DJANGO_SECRET_KEY', default='z8j30%9q-jk9x!^j5q6#r+2bzc)#3kh#y-frt(5er+qpt-*en3')
