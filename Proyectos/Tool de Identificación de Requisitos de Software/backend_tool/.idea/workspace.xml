@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a009fd-ea28-41dd-820e-adf6d705a491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/behaviors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Analisis/~$IRS-DR.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements/base.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/base.txt" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,35 +40,49 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/../../.." source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/../../.." source="ximena" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="1dxsWbgUhCowWqUVqqVJAcwj405" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/users" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/users" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration name="pruebadjango" type="Python.DjangoServer" factoryName="Django server">
@@ -122,23 +125,31 @@
       <workItem from="1593634872649" duration="4530000" />
       <workItem from="1593688998716" duration="191000" />
       <workItem from="1593956956048" duration="607000" />
-      <workItem from="1593965012532" duration="4282000" />
+      <workItem from="1593965276085" duration="1656000" />
+      <workItem from="1593968021220" duration="2345000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="1083" y="298" width="672" height="607" key="EnvironmentVariablesDialog" timestamp="1593967725527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1083" y="298" width="672" height="607" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593967725527" />
+    <state x="1200" y="278" key="FileChooserDialogImpl" timestamp="1593967211971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1200" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593967211971" />
+    <state x="553" y="138" width="1325" height="810" key="SettingsEditor" timestamp="1593968296263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="553" y="138" width="1325" height="810" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593968296263" />
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593969975347">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593969975347" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
