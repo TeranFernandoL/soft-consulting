@@ -3,7 +3,7 @@
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
   layout:decorate="~{principal}">
 <head>
-<title>Productos</title>
+<title>Usuarios</title>
 </head>
 
 <th:block layout:fragment="style">
@@ -14,15 +14,18 @@
 <body>
 	<div layout:fragment="content">
 	
-		<div class="card">
+		<div class="card-body pad table-responsive">
             <div class="card-header">
-              <h3 class="card-title">Pantalla de Productos</h3>
+              <h3 class="card-title">Pantalla de Usuarios</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-            
-              <table id="example1" class="table table-bordered table-striped">
-              </table>
+            <td>
+              <button type="button" class="btn btn-primary btn-lg  btn-cl-5">Nuevo Usuario</button>
+            </td>
+              
+             <table id="example1" class="table table-bordered table-striped">
+             </table>
             </div>
             <!-- /.card-body -->
           </div>
@@ -31,7 +34,7 @@
 	</div>
 	
 	<th:block layout:fragment="script">
-		<script th:src = "@{../resources/js/pagina/productos/productos.js}"></script>
+		<script th:src = "@{../resources/js/pagina/usuarios/usuarios.js}" src="../../../../resources/js/pagina/usuarios/usuarios.js"></script>
 		
 
    	</th:block>
