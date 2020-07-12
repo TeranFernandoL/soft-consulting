@@ -51,19 +51,14 @@ class UserManager(BaseUserManager):
 
 
 class User(TimesStampedModel, AbstractBaseUser, PermissionsMixin):
-    class Gender(Enum):
-        HOMBRE = "hombre"
-        MUJER = "mujer"
-
 
     email = models.EmailField('correo electronico', unique=True)
     first_name = models.CharField('nombres', max_length=100)
     last_name = models.CharField('apellidos', max_length=100)
     photo = models.ImageField('foto', upload_to='user', blank=True, null=True)
     objects = UserManager()
-    gender = models.CharField('genero', max_length=20, blank=True, null=True,
-                              choices=[(item.name, item.value) for item in Gender])
-    birthday = models.DateField(blank=True, null=True, verbose_name='cumpleaños')
+    address = models.CharField('direccion', max_length=200, blank=True, null=True)
+    enterprise_name = models.CharField('nombre de empresa', max_length=200, blank=True, null=True)
     phone = models.CharField('celular', max_length=30, blank=True, null=True)
     is_enabled = models.BooleanField(default=True, verbose_name='Habilitar Usuario')
     is_active = models.BooleanField(default=True)
