@@ -31,9 +31,6 @@ class LoginAPIView(generics.GenericAPIView):
         return Response({'token': token.key}, status=status.HTTP_200_OK)
 
 
-login = LoginAPIView.as_view()
-
-
 class CreateUserAPIView(generics.CreateAPIView):
     serializer_class = CreateUserSerializer
 
@@ -46,6 +43,13 @@ class CreateUserAPIView(generics.CreateAPIView):
 
 
 createuser = CreateUserAPIView.as_view()
+
+class ListCreateUserAPIView(generics.ListCreateAPIView):
+    serializer_class = RetrieveUserSerializer
+
+    def get_queryset(self):
+        return User.objects.filter(gender='HOMBRE')
+
 
 
 class RUDUserAPIView(generics.RetrieveUpdateDestroyAPIView):

@@ -55,6 +55,7 @@ class User(TimesStampedModel, AbstractBaseUser, PermissionsMixin):
         HOMBRE = "hombre"
         MUJER = "mujer"
 
+
     email = models.EmailField('correo electronico', unique=True)
     first_name = models.CharField('nombres', max_length=100)
     last_name = models.CharField('apellidos', max_length=100)
