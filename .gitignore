@@ -1,0 +1,6 @@
+.DS_STORE
+.idea
+.idea/*
+.iws
+workspace.xml
+tasks.xml
