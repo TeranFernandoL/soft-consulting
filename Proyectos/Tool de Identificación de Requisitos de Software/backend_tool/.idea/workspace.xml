@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f8a009fd-ea28-41dd-820e-adf6d705a491" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +132,7 @@
       <workItem from="1593965012532" duration="12067000" />
       <workItem from="1594422087719" duration="186000" />
       <workItem from="1594561383159" duration="207000" />
+      <workItem from="1594572517953" duration="2877000" />
     </task>
     <servers />
   </component>

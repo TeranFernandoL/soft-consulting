@@ -21,15 +21,18 @@ from .serializers import *
 
 from django.utils.deprecation import MiddlewareMixin
 
+
 class ListCreateProyectoAPIView(generics.ListCreateAPIView):
     serializer_class = ProyectoSerializer
 
     def get_queryset(self):
         return Proyecto.objects.all()
 
+
 class RUDProyectoAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProyectoSerializer
 
     def get_object(self):
+        obj = Proyecto.objects.get(id = self.kwargs['pk'])
         obj = get_object_or_404(Proyecto, id=self.kwargs['pk'])
         return obj
