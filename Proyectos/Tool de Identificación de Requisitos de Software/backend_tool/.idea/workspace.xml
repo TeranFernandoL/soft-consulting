@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a009fd-ea28-41dd-820e-adf6d705a491" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/projects/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pruebadjango.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pruebadjango.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/base.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/base.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,20 +84,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/ContenedoresPython3/TIRSenv/Scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="pruebadjango" type="Python.DjangoServer" factoryName="Django server">
+    <configuration name="TIRSenv" type="Python.DjangoServer" factoryName="Django server">
       <module name="pruebadjango" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\HP\ContenedoresPython3\TIRSenv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -127,6 +133,12 @@
       <workItem from="1593956956048" duration="607000" />
       <workItem from="1593965276085" duration="1656000" />
       <workItem from="1593968021220" duration="2345000" />
+      <workItem from="1594600687987" duration="740000" />
+      <workItem from="1594605273286" duration="1628000" />
+      <workItem from="1594612306124" duration="26000" />
+      <workItem from="1594700999388" duration="3582000" />
+      <workItem from="1594775137582" duration="3307000" />
+      <workItem from="1594784186945" duration="2606000" />
     </task>
     <servers />
   </component>
@@ -134,17 +146,24 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1083" y="298" width="672" height="607" key="EnvironmentVariablesDialog" timestamp="1593967725527">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="274" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594783662357">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="274" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594783662357" />
+    <state x="96" y="172" width="672" height="607" key="EnvironmentVariablesDialog" timestamp="1594705526503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="96" y="172" key="EnvironmentVariablesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594705526503" />
     <state x="1083" y="298" width="672" height="607" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593967725527" />
-    <state x="1200" y="278" key="FileChooserDialogImpl" timestamp="1593967211971">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="357" y="94" key="FileChooserDialogImpl" timestamp="1594783306552">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="357" y="94" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594783306552" />
     <state x="1200" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593967211971" />
-    <state x="553" y="138" width="1325" height="810" key="SettingsEditor" timestamp="1593968296263">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-15" y="7" width="943" height="708" key="SettingsEditor" timestamp="1594783320593">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="-15" y="7" width="943" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594783320593" />
     <state x="553" y="138" width="1325" height="810" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593968296263" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593969975347">
       <screen x="0" y="0" width="1920" height="1040" />
