@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a009fd-ea28-41dd-820e-adf6d705a491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/projects/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pruebadjango.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pruebadjango.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyectos/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requisitos/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuarios/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/local.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +77,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -139,6 +137,7 @@
       <workItem from="1594700999388" duration="3582000" />
       <workItem from="1594775137582" duration="3307000" />
       <workItem from="1594784186945" duration="2606000" />
+      <workItem from="1594867672961" duration="2791000" />
     </task>
     <servers />
   </component>
