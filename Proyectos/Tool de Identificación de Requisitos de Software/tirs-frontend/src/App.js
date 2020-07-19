@@ -1,11 +1,12 @@
 import React from 'react';
-import {Container} from 'react-bootstrap';
+
+import Rutas from './components/layout/Rutas'
 
 function App() {
   return (
-    <h1>
-      Hola
-    </h1>
+    <>
+      <Rutas />
+    </>
   );
 }
 
