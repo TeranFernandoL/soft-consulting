@@ -23,7 +23,7 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "tirsdb",
+        'NAME': "tirsbd",
         'USER': "postgres",
         'PASSWORD': "admin",
         'HOST': 'localhost',
@@ -31,5 +31,3 @@ DATABASES = {
     }
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
-
-
