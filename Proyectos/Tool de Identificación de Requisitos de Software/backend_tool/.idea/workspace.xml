@@ -2,24 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69b97029-7889-49a6-ba8e-555a7bcc2051" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pruebadjango.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pruebadjango.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/requirements/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/requirements/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectos/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/proyectos/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requisitos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requisitos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requisitos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requisitos/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requisitos/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requisitos/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requisitos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requisitos/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requisitos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requisitos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requisitos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requisitos/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requisitos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requisitos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/behaviors.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/behaviors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/proyectos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requisitos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requisitos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requisitos/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requisitos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requisitos/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requisitos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requisitos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +118,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\Github\soft-consulting\Proyectos\Tool de Identificación de Requisitos de Software\backend_tool\apps" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="TIRSenv" type="Python.DjangoServer" factoryName="Django server">
       <module name="pruebadjango" />
@@ -152,7 +173,7 @@
       <workItem from="1594775137582" duration="3307000" />
       <workItem from="1594784186945" duration="2606000" />
       <workItem from="1594867672961" duration="2791000" />
-      <workItem from="1595178231674" duration="798000" />
+      <workItem from="1595178231674" duration="16010000" />
     </task>
     <servers />
   </component>
@@ -183,6 +204,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593969975347" />
+    <state x="687" y="49" key="search.everywhere.popup" timestamp="1595226552302">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="687" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595226552302" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
