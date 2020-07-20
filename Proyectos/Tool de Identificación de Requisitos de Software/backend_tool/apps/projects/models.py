@@ -12,7 +12,7 @@ class Project(TimesStampedModel):
     description = models.TextField('descripcion', blank=True, null=True)
     date_end = models.DateTimeField('fecha de vencimiento', blank=True, null=True)
     confirmation = models.BooleanField('confimacion', default=False)
-    users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='projects', through='UserProject')
+    users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='projects', through='UserProject', blank=True)
 
     def __str__(self):
         return "{} - {}".format(self.id, self.name)
@@ -23,7 +23,6 @@ class UserProject(TimesStampedModel):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='user_projects', blank=True, null=True,
                              on_delete=models.CASCADE)
     confirmation = models.BooleanField('confirmation', default=False)
-    type = models.CharField('tipo', max_length=20, blank=True, null=True)
 
     def __str__(self):
         return "{} ".format(self.id)

@@ -31,7 +31,7 @@ class ListCreateProyectoAPIView(generics.ListCreateAPIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
     def perform_create(self, serializer):
-        return serializer.save(user=self.request.user)
+        return serializer.save()
 
 
 class RUDProyectoAPIView(generics.RetrieveUpdateDestroyAPIView):
