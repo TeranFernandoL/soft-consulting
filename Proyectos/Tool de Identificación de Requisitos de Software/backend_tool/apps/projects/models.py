@@ -1,5 +1,3 @@
-from django.db import models
-
 # Create your models here.
 from django.db import models
 from apps.behaviors import TimesStampedModel
@@ -13,6 +11,7 @@ class Project(TimesStampedModel):
     date_end = models.DateTimeField('fecha de vencimiento', blank=True, null=True)
     confirmation = models.BooleanField('confimacion', default=False)
     users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='projects', through='UserProject', blank=True)
+
 
     def __str__(self):
         return "{} - {}".format(self.id, self.name)
@@ -29,3 +28,4 @@ class UserProject(TimesStampedModel):
 
     class Meta:
         unique_together = ('project', 'user')
+
