@@ -1,7 +1,5 @@
-from django.urls import path, re_path
-from django.urls import reverse, reverse_lazy
-from django.contrib.auth import views
-from .views import *
+from django.urls import path
+from apps.projects.views import *
 
 app_name = "proyectos"
 urlpatterns = [

@@ -9,12 +9,30 @@ from rest_framework.relations import RelatedField
 from rest_framework import serializers
 from rest_framework.serializers import PrimaryKeyRelatedField
 from django.template import loader
+from apps.users.serializers import RetrieveUserSerializer
 from .models import *
 
 
-class ProyectoSerializer(serializers.ModelSerializer):
+class UserProjectSerializer(serializers.ModelSerializer):
+    user = RetrieveUserSerializer()
+
     class Meta:
-        model = Proyecto
-        fields = (
-            'id', 'name')
+        model = UserProject
+        fields = '__all__'
+        read_only_fields = ('id',)
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Project
+        fields = '__all__'
+        read_only_fields = ('id',)
+
+
+class ProjectViewSerializer(serializers.ModelSerializer):
+    users = RetrieveUserSerializer(many=True)
+
+    class Meta:
+        model = Project
+        fields = '__all__'
         read_only_fields = ('id',)

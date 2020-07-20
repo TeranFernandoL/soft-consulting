@@ -23,9 +23,9 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "tooldb",
-        'USER': "postgres",
-        'PASSWORD': "postgres",
+        'NAME': "pruebadjangodb",
+        'USER': "shinobu",
+        'PASSWORD': "shinobu",
         'HOST': 'localhost',
         'PORT': '',
     }
