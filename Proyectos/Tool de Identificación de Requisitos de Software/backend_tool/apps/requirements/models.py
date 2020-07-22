@@ -2,12 +2,13 @@ from django.db import models
 from apps.behaviors import TimesStampedModel
 from django.conf import settings
 from enum import Enum
-from apps import projects
+from apps.projects.models import Project
+
 
 # Create your models here.
 
 class Requirement(TimesStampedModel):
-    name = models.CharField(verbose_name='nombre', max_length=100, blank=True, null=False)
+    name = models.CharField(verbose_name='nombre', max_length=200, blank=True, null=True)
     description = models.TextField(verbose_name='descripcion', blank=True, null=True)
     priority = models.CharField(verbose_name='prioridad', max_length=10, blank=True, null=True)
     cost = models.FloatField(verbose_name='costo', blank=True, null=True)
@@ -19,6 +20,6 @@ class Requirement(TimesStampedModel):
         return "{} - {}".format(self.id, self.name)
 
 class Project_Requirement(TimesStampedModel):
-    requirement = models.ForeignKey(Requirement, related_name= 'Clave foranea requerimiento', blank=True, null=True, on_delete= models.CASCADE)
-    project = models.ForeignKey(projects,related_name='Clave foranea proyectos', blank=True, null=True, on_delete= models.CASCADE)
+    requirement = models.ForeignKey(Requirement, related_name= 'Clave_foranea_requerimiento', blank=True, null=True, on_delete= models.CASCADE)
+    project = models.ForeignKey(Project,related_name='Clave_foranea_proyectos', blank=True, null=True, on_delete= models.CASCADE)
     confirmation = models.BooleanField(verbose_name='confirmacion', default=False)

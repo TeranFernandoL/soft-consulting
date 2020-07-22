@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69b97029-7889-49a6-ba8e-555a7bcc2051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/requirements/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/requirements/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pruebadjango.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pruebadjango.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/behaviors.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/behaviors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/proyectos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/proyectos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/proyectos/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/proyectos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/proyectos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/proyectos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/proyectos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/requisitos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/requisitos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/requisitos/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/requisitos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/requisitos/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/requisitos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/requisitos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/projects/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requirements/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/requirements/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +103,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="config.settings.local" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -173,7 +147,8 @@
       <workItem from="1594775137582" duration="3307000" />
       <workItem from="1594784186945" duration="2606000" />
       <workItem from="1594867672961" duration="2791000" />
-      <workItem from="1595178231674" duration="16010000" />
+      <workItem from="1595178231674" duration="16429000" />
+      <workItem from="1595380778923" duration="9743000" />
     </task>
     <servers />
   </component>
@@ -195,6 +170,22 @@
     </state>
     <state x="357" y="94" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595176680844" />
     <state x="1200" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593967211971" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595389998743">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595389998743" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595389998742">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595389998742" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595389998741">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595389998741" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595389998742">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595389998742" />
     <state x="139" y="8" width="943" height="708" key="SettingsEditor" timestamp="1595177828953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

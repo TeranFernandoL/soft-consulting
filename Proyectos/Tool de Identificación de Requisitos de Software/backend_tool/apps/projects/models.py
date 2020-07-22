@@ -26,4 +26,4 @@ class User_Project(TimesStampedModel):
     project = models.ForeignKey(Project, related_name= 'user_projects', blank=True, null=True, on_delete= models.CASCADE)
     confirmation = models.BooleanField(verbose_name='confirmation', default=False)
     colaborador = models.CharField('tipo_usuario', max_length=14, blank=True, null=True,
-                                   choices=[(item.name, item.value) for item in Colaborator])
+                                choices=[(item.name, item.value) for item in Colaborator])

@@ -3,6 +3,7 @@ from .models import *
 
 class RequirementSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Requirement #Preguntar
-        fields = ('id', 'nombre_req', 'priority_req', 'costo_req', 'creation_date_req', 'show')
-        #read_only_fields = () #preguntar
+        model = Requirement
+        fields = ('id', 'name', 'description', 'cost', 'creation_date', 'show')
+        read_only_fields = ('name', 'description','cost')
+        ##
