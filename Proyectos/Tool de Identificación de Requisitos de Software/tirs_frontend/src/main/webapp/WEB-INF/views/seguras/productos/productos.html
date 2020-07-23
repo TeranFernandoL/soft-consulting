@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{principal}">
+<head>
+<title>Productos</title>
+</head>
+
+<th:block layout:fragment="style">
+	<script th:src = "@{../resources/css/pagina/productos/productos.css}"></script>
+	
+</th:block>
+
+<body>
+	<div layout:fragment="content">
+	
+		<div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Pantalla de Productos</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+            
+              <table id="example1" class="table table-bordered table-striped">
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          
+	</div>
+	
+	<th:block layout:fragment="script">
+		<script th:src = "@{../resources/js/pagina/productos/productos.js}"></script>
+		
+
+   	</th:block>
+</body>
+</html>
