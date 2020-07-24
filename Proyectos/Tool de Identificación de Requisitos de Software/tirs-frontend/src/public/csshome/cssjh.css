@@ -1,0 +1,24 @@
+.titulos1{
+    color: white;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.contenido{
+    
+    background:  #343a40;
+    width: 50%;
+    border-radius: 8px;
+    background: url(../img01.jpg) no-repeat fixed center ;
+    background-size: cover;
+    background-position: cover;
+
+}
+.imagen{
+    border-radius: 8px;
+    filter: sepia(10%);
+    opacity: 92%;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+
