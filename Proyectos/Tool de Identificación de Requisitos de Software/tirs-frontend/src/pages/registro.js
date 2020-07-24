@@ -25,9 +25,9 @@ export default function Registro() {
         })    
       }
 
-
     const registro = async (event) => {
         event.preventDefault();
+        
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.stopPropagation();
@@ -45,8 +45,17 @@ export default function Registro() {
             }
             console.log(username);
             
-            // const res = metodoGeneral('rutaBacl/ruta',metodo,username)  //mandar objeto al back para el registro
-            // history.push('/listaProyectos')
+            // const res = metodoGeneral('http://fd2802530c1a.ngrok.io/api/v1/users/login/','POST',username)  //mandar objeto al back para el registro
+            // if(res == 0){
+            //     console.log('no se pudo registrar');
+                
+            // }
+            // else{
+            //     console.log('registrado');
+                
+                // history.push('/listaProyectos')
+                // window.location.reload();
+            // }
         }
         setValidated(true)
       }
