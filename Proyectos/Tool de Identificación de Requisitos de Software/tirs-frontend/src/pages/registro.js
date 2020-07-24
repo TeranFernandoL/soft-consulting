@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import {Row, Col, Form, Container} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import metodoGeneral from '../lib/metodos'
+import {metodoGeneral} from '../lib/metodos.js' 
+import {setJsonStorage} from '../lib/jsonStorages'
 
 export default function Registro() {
     const history = useHistory();
@@ -40,22 +41,26 @@ export default function Registro() {
                 email: formValue.email,
                 password: formValue.contraseña,
                 phone: formValue.cel,
-                adress: formValue.direccion,
-                enterprise: formValue.empresa 
+                address: formValue.direccion,
+                enterprise_name: formValue.empresa 
             }
             console.log(username);
             
-            // const res = metodoGeneral('http://fd2802530c1a.ngrok.io/api/v1/users/login/','POST',username)  //mandar objeto al back para el registro
-            // if(res == 0){
-            //     console.log('no se pudo registrar');
+            const tkn = await metodoGeneral('/users/create/','POST',username,true)  //mandar objeto al back para el registro
+            
+            
+            localStorage.setItem('TIRS_token',tkn.token);
+
+            if(tkn == 0){
+                console.log('no se pudo registrar');
                 
-            // }
-            // else{
-            //     console.log('registrado');
-                
-                // history.push('/listaProyectos')
-                // window.location.reload();
-            // }
+            }
+            else{
+                const user = await metodoGeneral('/users/')
+                await setJsonStorage('TIRS_usuario',user);
+                history.push('/listaProyectos')
+                window.location.reload();
+            }
         }
         setValidated(true)
       }
