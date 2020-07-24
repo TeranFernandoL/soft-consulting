@@ -1,7 +1,20 @@
 import React from 'react'
+import useFetch from '../hooks/useFetch'
+import {useLayoutEffect} from 'react';
+import {metodoGeneral} from '../lib/metodos'
+
 import {Row, Col, Form, Container, Button} from 'react-bootstrap';
 
 export default function ListaProyectos() {
+    // // const api = useFetch('https://c5042682eafe.ngrok.io/api/v1/users/');
+    // // console.log(api);
+    // let api;
+    // useEffect(() => {
+        const result = useFetch('https://c5042682eafe.ngrok.io/api/v1/users/');
+        console.log(result);
+        
+    // }, [])
+  
     return (
     <>
      <br></br><br></br>
@@ -66,4 +79,5 @@ export default function ListaProyectos() {
 
        
     </>);
+
 };

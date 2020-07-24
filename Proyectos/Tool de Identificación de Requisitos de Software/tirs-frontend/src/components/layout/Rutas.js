@@ -46,7 +46,6 @@ export default function Rutas() {
 
                 <Route path="*"><Error404/></Route>
             </Switch>
-
         </Router>
     )
 };
