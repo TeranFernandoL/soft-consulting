@@ -59,6 +59,7 @@ class User(TimesStampedModel, AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
     address = models.CharField('direccion', max_length=200, blank=True, null=True)
     enterprise_name = models.CharField('nombre de empresa', max_length=200, blank=True, null=True)
+    dni = models.CharField('dni',max_length=8,blank=True,null=True)
     phone = models.CharField('celular', max_length=30, blank=True, null=True)
     is_enabled = models.BooleanField(default=True, verbose_name='Habilitar Usuario')
     is_active = models.BooleanField(default=True)
@@ -71,6 +72,8 @@ class User(TimesStampedModel, AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         return self.first_name
+
+
 
     class Meta:
         verbose_name = "Usuario"

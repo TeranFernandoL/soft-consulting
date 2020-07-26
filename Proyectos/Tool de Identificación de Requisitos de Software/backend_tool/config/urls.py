@@ -41,10 +41,12 @@ urlpatterns = [
                   path(
                       "api/v1/users/",
                       include("apps.users.urls", namespace="users"),
-                  ), path(
-                      "api/v1/projects/",
-                      include("apps.projects.urls", namespace="projects"),
                   ),
+                  path(
+                      "api/v1/projects/",
+                      include("apps.projects.urls", namespace="proyectos"),
+                  ),
+
                   re_path(r'^swagger(?P<format>\.json|\.yaml)/$', schema_view.without_ui(cache_timeout=None),
                           name='schema-json'),
                   path("swagger/", schema_view.with_ui('swagger', cache_timeout=None), name='schema-swagger-ui'),
