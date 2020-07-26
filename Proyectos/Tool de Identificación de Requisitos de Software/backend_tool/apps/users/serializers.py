@@ -15,13 +15,15 @@ from .models import *
 class CreateUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('email', 'password', 'first_name', 'last_name', 'phone')
+        fields = ('email', 'password', 'first_name', 'last_name', 'phone', 'address', 'enterprise_name', 'dni')
         write_only_fields = ('password',)
         read_only_fields = ('id',)
 
     def create(self, validated_data):
         user = User.objects.create(email=validated_data['email'], first_name=validated_data['first_name'],
-                                   last_name=validated_data['last_name'], phone=validated_data['phone'])
+                                   last_name=validated_data['last_name'], phone=validated_data['phone'],
+                                   address=validated_data['address'], enterprise_name=validated_data['enterprise_name'],
+                                   dni=validated_data['dni'])
         user.set_password(validated_data['password'])
         user.save()
         Token.objects.create(user=user)
@@ -47,7 +49,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id', 'email', 'first_name', 'last_name', 'phone', 'photo')
+            'id', 'email', 'first_name', 'last_name', 'phone', 'photo', 'address', 'enterprise_name', 'dni')
         read_only_fields = ('id', 'email')
 
 
@@ -55,7 +57,7 @@ class RetrieveUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id', 'email', 'first_name', 'last_name', 'phone', 'photo')
+            'id', 'email', 'first_name', 'last_name', 'phone', 'photo', 'address', 'enterprise_name', 'dni')
         read_only_fields = ('id', 'email')
 
 
