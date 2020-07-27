@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-
+import {ruta} from '../lib/ruta'
 export default function useFetch(url) {
     const [loading, setLoading] = useState(true);
     const [result, setResult] = useState(null);
@@ -10,7 +10,7 @@ export default function useFetch(url) {
     useEffect(()=>{
        (async () => {
             try{
-                const res = await fetch(url, {method: 'GET', headers: {'Content-Type': 'application/json','authorization': 'Token ' + token}});
+                const res = await fetch(ruta + url, {method: 'GET', headers: {'Content-Type': 'application/json','authorization': 'Token ' + token}});
                 const json = await res.json();
                 setResult(json);
                 setLoading(false);

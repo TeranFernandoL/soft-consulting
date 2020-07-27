@@ -2,6 +2,7 @@ import React from 'react'
 import {Row, Col, Form, Container} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import {metodoGeneral} from '../lib/metodos.js' //mandar json al back
+import {setJsonStorage} from '../lib/jsonStorages'
 
 export default function Login() {
     const history = useHistory();
@@ -17,11 +18,13 @@ export default function Login() {
             password: contraseña
         }
 
-        const tkn = await metodoGeneral('https://c5042682eafe.ngrok.io/api/v1/users/login/','POST',usuario,true)
-        console.log(tkn.token);
+        const tkn = await metodoGeneral('/users/login/','POST',usuario,true)
         localStorage.setItem('TIRS_token',tkn.token);
         
         if(tkn.token != null){
+            const user = await metodoGeneral('/users/')
+            await setJsonStorage('TIRS_usuario',user);
+            
             history.push('/listaProyectos')
             window.location.reload();
         }
