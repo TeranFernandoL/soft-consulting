@@ -47,7 +47,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id', 'email', 'first_name', 'last_name', 'phone', 'gender', 'photo')
+            'id', 'email', 'first_name', 'last_name', 'phone', 'photo')
         read_only_fields = ('id', 'email')
 
 
@@ -55,7 +55,7 @@ class RetrieveUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id', 'email', 'first_name', 'last_name', 'phone', 'gender', 'photo')
+            'id', 'email', 'first_name', 'last_name', 'phone', 'photo')
         read_only_fields = ('id', 'email')
 
 
