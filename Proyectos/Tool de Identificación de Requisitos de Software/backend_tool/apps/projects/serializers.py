@@ -11,6 +11,7 @@ from rest_framework.serializers import PrimaryKeyRelatedField
 from django.template import loader
 from apps.users.serializers import RetrieveUserSerializer
 from .models import *
+from apps.users.models import User
 
 
 class UserProjectSerializer(serializers.ModelSerializer):
@@ -37,3 +38,25 @@ class ProjectViewSerializer(serializers.ModelSerializer):
         model = Project
         fields = '__all__'
         read_only_fields = ('id',)
+
+
+class DeleteProjectSerializer(serializers.Serializer):
+    password = serializers.CharField(error_messages={"blank": "Este campo es obligatorio"})
+    project = serializers.IntegerField(error_messages={"blank": "Este campo es obligatorio"})
+
+    def validate(self, attrs):
+        user = self.context.get("user")
+        if not user.check_password(attrs.get("password")):
+            raise serializers.ValidationError({"password": "Password Error"})
+        return attrs
+
+
+class InviteProjectSerializer(serializers.Serializer):
+    email = serializers.EmailField(error_messages={"blank": "Este campo es obligatorio"})
+    project = serializers.IntegerField(error_messages={"blank": "Este campo es obligatorio"})
+
+    def validate(self, attrs):
+        email = attrs.get("email")
+        if not User.objects.filter(email=email):
+            raise serializers.ValidationError({"email": "Email mismatch"})
+        return attrs
