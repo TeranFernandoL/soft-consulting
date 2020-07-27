@@ -12,7 +12,7 @@ from .models import *
 class MyUserAdmin(UserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password', 'is_active', 'phone')}),
-        (_('Personal info'), {'fields': ('first_name', 'last_name', 'photo', 'birthday')}),
+        (_('Personal info'), {'fields': ('first_name', 'last_name', 'photo', 'enterprise_name')}),
         (_('Important dates'), {'fields': ('last_login',)}),
     )
     add_fieldsets = (

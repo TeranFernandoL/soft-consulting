@@ -11,8 +11,9 @@ export default function FormNuevoProyecto() {
     const [formValue, setFormValue] = useState({
         nombre: "",
         descripcion: "",
+        rubro: "VENTAS_ONLINE",
         usuario: usuario.id,
-        valitacion: true
+        valitacion: false
     });
     
     const onChange = async e => {
@@ -32,11 +33,12 @@ export default function FormNuevoProyecto() {
         const nuevoProyecto = {
             name: formValue.nombre,
             description: formValue.descripcion,
-            users: [formValue.usuario],
+            rubro: formValue.rubro,
             confirmation: formValue.valitacion,
         }
 
-
+        console.log(nuevoProyecto);
+        
         const res = await metodoGeneral('/projects/','POST',nuevoProyecto)  //mandar objeto al back para el registro
         
         console.log(res);
@@ -81,11 +83,12 @@ export default function FormNuevoProyecto() {
             <Form.Label>Tipo/Rubro</Form.Label> 
           </Form.Group>
           <Form.Group as={Col} md="9">
-            <Form.Control as="select">
-                <option value="0">Ventas online</option>
-                <option value="1">Vlog</option>
-                <option value="3">Pagina informativa</option>
-                <option value="4">Pagina Coorporativa</option>
+            <Form.Control as="select" name="rubro">
+                <option value="VENTAS_ONLINE">Ventas online</option>
+                <option value="BLOG">Blog</option>
+                <option value="INFORMATIVA">Pagina informativa</option>
+                <option value="CORPORATIVA">Pagina Corporativa</option>
+                <option value="OTROS">Otros</option>
                 </Form.Control>
           </Form.Group>
           

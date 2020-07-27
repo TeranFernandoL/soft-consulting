@@ -7,20 +7,21 @@ import {getJsonStorage} from '../lib/jsonStorages'
 import useFetch from '../hooks/useFetch';
 import TablaProyectos from '../components/ListaProyectos/tablaProyectos'
 import FormNuevoProyecto from '../components/ListaProyectos/formNuevoProyecto'
-import Modal from '../components/Modales/modal'
-import ModalDos from '../components/Modales/modal'
+import ModalAgregarProyecto from '../components/Modales/modal'
 
 export default function ListaProyectos() {    
     const proyectos = useFetch('/projects/')
-    const [isOpenModal, setIsOpenModal] = useState(false);
+    const [isOpenModalAgregar, setIsOpenModalAgregar] = useState(false);
 
-    const openModal = () => {
-        setIsOpenModal(true);
+    const openModalAgregar = () => {
+        setIsOpenModalAgregar(true);
     }
 
-    const closeModal = () => {
-        setIsOpenModal(false);
+    const closeModalAgregar = () => {
+        setIsOpenModalAgregar(false);
     }
+
+ 
 
     return (
         <>
@@ -29,9 +30,10 @@ export default function ListaProyectos() {
             <Container>
                 <br />
                 <>
-                <button type="button" className="btn btn-success" onClick = {openModal}>Nuevo Proyecto</button>
+                <button type="button" className="btn btn-success" onClick = {openModalAgregar}>Nuevo Proyecto</button>
                 <br /><br />
-                <Modal isOpenModal = {isOpenModal} closeModal= {closeModal}><FormNuevoProyecto /></Modal>
+                <ModalAgregarProyecto isOpenModal = {isOpenModalAgregar} closeModal= {closeModalAgregar}><FormNuevoProyecto /></ModalAgregarProyecto>
+                {/* <ModalModificarProyecto ><FormModificarProyecto /></ModalModificarProyecto> */}
                 <TablaProyectos proyectos = {proyectos}/>
                 </>
             </Container>
