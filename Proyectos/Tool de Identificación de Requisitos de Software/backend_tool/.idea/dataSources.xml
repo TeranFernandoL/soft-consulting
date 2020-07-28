@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ferdb@localhost" uuid="acddb141-b5c6-4f92-ae50-444b90aac06b">
+    <data-source source="LOCAL" name="HP@localhost" uuid="acddb141-b5c6-4f92-ae50-444b90aac06b">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/ferdb</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="cfd89b67-7a01-46ed-b5c2-65f4b90e445d">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/settings/local.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/tooldb</jdbc-url>
     </data-source>
   </component>
 </project>
