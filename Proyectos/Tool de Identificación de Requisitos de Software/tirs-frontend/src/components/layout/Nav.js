@@ -21,6 +21,7 @@ export default function Nav(){
                         />
                         TIRS
                     </Navbar.Brand>
+                    <Button>Deslogueo</Button>
                 </Container>
             </Navbar>
         </div>

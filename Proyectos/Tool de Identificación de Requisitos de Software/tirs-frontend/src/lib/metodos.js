@@ -1,17 +1,24 @@
 import fetch from 'isomorphic-unfetch';
-// import {ruta} from '../public/ruta';
+import {ruta} from './ruta';
 
 
-export const metodoGeneral = async (direccion, metodo, body) => {
-    let ruta = ''; //se utiliza si hay una constante el todas las rutas 
+export const metodoGeneral = async (direccion, metodo, body, log) => {
     let url = ruta + direccion;
-    let token = await document.cookie.substring(6);
+    
+    let token = localStorage.getItem('TIRS_token');
     
     let metho = 'GET'; //EL METODO POR DEFECTO DE GET
     if(metodo != undefined)
         metho = metodo
-    
-    const options = {method: metho, headers: {'Content-Type': 'application/json','authorization': ('Token ' + token)}}
+        
+    let options
+
+    if(log){
+        options = {method: metho, headers: {'Content-Type': 'application/json'}}
+    }
+    else{
+        options = {method: metho, headers: {'Content-Type': 'application/json','authorization': 'Token ' + token}}
+    }
 
     if(body != undefined)
         options.body = JSON.stringify(body);
@@ -32,3 +39,18 @@ export const metodoGeneral = async (direccion, metodo, body) => {
 
 }
 
+
+export const setFecha = (fechaParaSetear) => {
+    const fecha = new Date(fechaParaSetear);
+    let anio = fecha.getFullYear()
+    let mes = fecha.getMonth() + 1;
+    let dia = fecha.getDay();
+    if(fecha.getDay() < 10){
+        dia= '0' + dia;
+    }
+    if(fecha.getMonth() < 10){
+         mes= '0' + mes;
+    }
+    return `${dia}/${mes}/${anio}`
+
+}

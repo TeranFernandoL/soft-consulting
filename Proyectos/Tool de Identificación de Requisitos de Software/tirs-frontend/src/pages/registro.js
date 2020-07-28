@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import {Row, Col, Form, Container} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import metodoGeneral from '../lib/metodos'
+import {metodoGeneral} from '../lib/metodos.js' 
+import {setJsonStorage} from '../lib/jsonStorages'
 
 export default function Registro() {
     const history = useHistory();
@@ -25,9 +26,9 @@ export default function Registro() {
         })    
       }
 
-
     const registro = async (event) => {
         event.preventDefault();
+        
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.stopPropagation();
@@ -40,13 +41,26 @@ export default function Registro() {
                 email: formValue.email,
                 password: formValue.contraseña,
                 phone: formValue.cel,
-                adress: formValue.direccion,
-                enterprise: formValue.empresa 
+                address: formValue.direccion,
+                enterprise_name: formValue.empresa 
             }
             console.log(username);
             
-            // const res = metodoGeneral('rutaBacl/ruta',metodo,username)  //mandar objeto al back para el registro
-            // history.push('/listaProyectos')
+            const tkn = await metodoGeneral('/users/create/','POST',username,true)  //mandar objeto al back para el registro
+            
+            
+            localStorage.setItem('TIRS_token',tkn.token);
+
+            if(tkn == 0){
+                console.log('no se pudo registrar');
+                
+            }
+            else{
+                const user = await metodoGeneral('/users/')
+                await setJsonStorage('TIRS_usuario',user);
+                history.push('/listaProyectos')
+                window.location.reload();
+            }
         }
         setValidated(true)
       }
