@@ -31,9 +31,6 @@ class LoginAPIView(generics.GenericAPIView):
         return Response({'token': token.key}, status=status.HTTP_200_OK)
 
 
-login = LoginAPIView.as_view()
-
-
 class CreateUserAPIView(generics.CreateAPIView):
     serializer_class = CreateUserSerializer
 
@@ -41,11 +38,16 @@ class CreateUserAPIView(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data, context={"request": request})
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
+
         token, created = Token.objects.get_or_create(user=user)
         return Response({'token': token.key}, status=status.HTTP_200_OK)
 
 
-createuser = CreateUserAPIView.as_view()
+class ListCreateUserAPIView(generics.ListCreateAPIView):
+    serializer_class = RetrieveUserSerializer
+
+    def get_queryset(self):
+        return User.objects.filter(gender='HOMBRE')
 
 
 class RUDUserAPIView(generics.RetrieveUpdateDestroyAPIView):
@@ -54,12 +56,6 @@ class RUDUserAPIView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_object(self):
         return self.request.user
-
-
-ruduser = RUDUserAPIView.as_view()
-
-
-# rud =  RETRIEVE , UPDATE , DESTROY
 
 
 class ChangePasswordAPIView(generics.GenericAPIView):
@@ -75,6 +71,4 @@ class ChangePasswordAPIView(generics.GenericAPIView):
         serializer.save()
         return Response({"detail": "OK"}, status=status.HTTP_200_OK)
 
-
-changepasswordapi = ChangePasswordAPIView.as_view()
 

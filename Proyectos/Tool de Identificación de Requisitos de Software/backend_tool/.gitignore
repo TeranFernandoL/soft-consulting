@@ -8,3 +8,5 @@ __pycache__/
 .idea
 *.pyc
 media/
+../../../Analisis/~$IRS-DR.docx
+../.DS_Store

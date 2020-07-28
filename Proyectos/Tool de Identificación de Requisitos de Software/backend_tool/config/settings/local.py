@@ -6,6 +6,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "0.0.0.0",
     "127.0.0.1",
+    "07a215a062c0.ngrok.io",
 ]
 # CACHES
 # ------------------------------------------------------------------------------
@@ -23,11 +24,13 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "tirsbd",
-        'USER': "postgres",
-        'PASSWORD': "admin",
+        'NAME': "pruebadjangodb",
+        'USER': "shinobu",
+        'PASSWORD': "shinobu",
         'HOST': 'localhost',
         'PORT': '',
     }
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
+
+

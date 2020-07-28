@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import *
+from apps.projects.views import *
 
-app_name = "projects"
+app_name = "proyectos"
 urlpatterns = [
-    path("", view=ListCreateProjectAPIView.as_view(), name="LISTAR Y CREAR PROYECTO"),
-    path("<int:pk>", view=RUDProjectAPIView.as_view(), name="RUD PROYECTO"),
+    path("", view=ListCreateProyectoAPIView.as_view(), name="LISTAR Y CREAR PROYECTO"),
+    path("<int:pk>", view=RUDProyectoAPIView.as_view(), name="RUD PROYECTO"),
+    path("out", view=DeleteProjectAPIView.as_view(), name="BORRAR PROYECTO"),
+    path("invite",view=InviteProjectAPIView.as_view(),name="INVITAR AMIGO"),
 ]
