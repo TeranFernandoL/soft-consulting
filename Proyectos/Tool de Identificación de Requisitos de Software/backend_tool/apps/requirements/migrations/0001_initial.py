@@ -9,33 +9,38 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
+        ('projects', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Project',
+            name='Requirement',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('creation_date', models.DateTimeField(auto_now_add=True)),
                 ('update_date', models.DateTimeField(auto_now=True)),
                 ('name', models.CharField(blank=True, max_length=200, null=True, verbose_name='nombre')),
                 ('description', models.TextField(blank=True, null=True, verbose_name='descripcion')),
-                ('date_end', models.DateTimeField(blank=True, null=True, verbose_name='fecha de vencimiento')),
-                ('confirmation', models.BooleanField(default=False, verbose_name='confimacion')),
-                ('rubro', models.CharField(blank=True, choices=[('VENTAS_ONLINE', 'VENTAS_ONLINE'), ('BLOG', 'BLOG'), ('INFORMATIVA', 'INFORMATIVA'), ('CORPORATIVA', 'CORPORATIVA'), ('OTROS', 'OTROS')], max_length=30, null=True, verbose_name='rubro')),
+                ('priority', models.CharField(blank=True, max_length=10, null=True, verbose_name='prioridad')),
+                ('cost', models.FloatField(blank=True, null=True, verbose_name='costo')),
+                ('creation_date', models.DateTimeField(blank=True, null=True, verbose_name='fecha de creacion')),
+                ('show', models.BooleanField(default=False, verbose_name='mostrar')),
             ],
             options={
                 'abstract': False,
             },
         ),
         migrations.CreateModel(
-            name='UserProject',
+            name='Project_Requirement',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('creation_date', models.DateTimeField(auto_now_add=True)),
                 ('update_date', models.DateTimeField(auto_now=True)),
-                ('confirmation', models.BooleanField(default=False, verbose_name='confirmation')),
-                ('project', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='user_projects', to='projects.Project')),
+                ('confirmation', models.BooleanField(default=False, verbose_name='confirmacion')),
+                ('project', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='Clave_foranea_proyectos', to='projects.Project')),
+                ('requirement', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='Clave_foranea_requerimiento', to='requirements.Requirement')),
             ],
+            options={
+                'abstract': False,
+            },
         ),
     ]

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Navbar} from 'react-bootstrap';
+import {Container, Navbar, Button} from 'react-bootstrap';
 import LogoRedux from '../../public/redux.png';
 
 import '../../public/nav.scss';
@@ -21,6 +21,7 @@ export default function Nav(){
                         />
                         TIRS
                     </Navbar.Brand>
+                    <Button>Deslogueo</Button>
                 </Container>
             </Navbar>
         </div>
