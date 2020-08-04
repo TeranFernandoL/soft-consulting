@@ -21,19 +21,19 @@ export default function ListaProyectos() {
         setIsOpenModalAgregar(false);
     }
 
- 
+    const usuario = getJsonStorage('TIRS_usuario');
+    
 
     return (
         <>
             <br></br><br></br>
-            <h3 style={{textAlign: "center"}}>Lista de Proyectos</h3>
+            <h3 style={{textAlign: "center"}}>Lista de Proyectos: {usuario.first_name}</h3>
             <Container>
                 <br />
                 <>
                 <button type="button" className="btn btn-success" onClick = {openModalAgregar}>Nuevo Proyecto</button>
                 <br /><br />
                 <ModalAgregarProyecto isOpenModal = {isOpenModalAgregar} closeModal= {closeModalAgregar}><FormNuevoProyecto /></ModalAgregarProyecto>
-                {/* <ModalModificarProyecto ><FormModificarProyecto /></ModalModificarProyecto> */}
                 <TablaProyectos proyectos = {proyectos}/>
                 </>
             </Container>

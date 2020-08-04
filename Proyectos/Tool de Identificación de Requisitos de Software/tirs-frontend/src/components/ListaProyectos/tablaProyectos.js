@@ -60,8 +60,9 @@ export default function TablaProyectos(props) {
     const openModalEliminar = (e) => {
         const tr = e.target.parentElement.parentElement;
         const id = tr.firstElementChild.textContent;
+        const nombre = tr.firstElementChild.nextSibling.textContent;
         const proyectoEliminar = {
-            id
+            id, nombre
         }
 
         setJsonStorage('modalProps',proyectoEliminar);

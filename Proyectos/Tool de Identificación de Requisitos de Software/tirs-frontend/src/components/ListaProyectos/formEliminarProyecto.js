@@ -6,7 +6,7 @@ import {metodoGeneral} from '../../lib/metodos'
 
 
 export default function FormNuevoProyecto() {
-    const {id} = getJsonStorage('modalProps');
+    const {id, nombre} = getJsonStorage('modalProps');
     const [validated, setValidated] = useState(false);
     const [formValue, setFormValue] = useState({
         id: id,
@@ -58,7 +58,7 @@ export default function FormNuevoProyecto() {
       validated={validated} onSubmit={handleSubmit} onChange={onChange} 
       className="m-4">
         <Form.Group className="text-center" >
-            <h1>Eliminar proyecto</h1>
+        <h1>Eliminar proyecto: {nombre}</h1>
         </Form.Group>
         <br></br>
         <br></br>
@@ -76,7 +76,7 @@ export default function FormNuevoProyecto() {
 
         <br></br>
         <div style={{textAlign: "center"}}>
-         <Button style={{textAlign: "center"}} type="submit" variant="success">Eliminar proyecto</Button>
+         <Button style={{textAlign: "center"}} type="submit" variant="danger">Eliminar proyecto</Button>
         </div>
       </Form>
     );
