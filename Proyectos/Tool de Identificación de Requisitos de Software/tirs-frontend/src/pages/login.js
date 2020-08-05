@@ -6,9 +6,6 @@ import {setJsonStorage} from '../lib/jsonStorages'
 
 export default function Login() {
     const history = useHistory();
-
-    // const logueoExitoso = 1;
-
     const login = async (e) => {
         e.preventDefault();
         const email = document.getElementById('login-email').value ;
