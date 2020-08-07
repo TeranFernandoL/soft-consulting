@@ -8,7 +8,8 @@ import ListaProyectos from '../../pages/listaProyectos'
 import Login from '../../pages/login'
 import Maquetado from '../../pages/maquetado'
 import Registro from '../../pages/registro'
-import Requerimientos from '../../pages/requerimientos'
+import RequerimientosGenerales from '../../pages/requerimientosGenerales'
+import RequerimientosEspecificos from '../../pages/requerimientosEspecificos'
 import Validacion from '../../pages/validacion'
 
 
@@ -28,15 +29,19 @@ export default function Rutas() {
                     <Registro />
                 </Route>
 
-                <Route path="/requerimientos" exact={true}>
-                    <Requerimientos />
+                <Route path="/requerimientos-generales/:id" exact={true}>
+                    <RequerimientosGenerales />
+                </Route>
+
+                <Route path="/requerimientos-especificos/:id" exact={true}>
+                    <RequerimientosEspecificos />
                 </Route>
 
                 <Route path="/listaProyectos" exact={true}>
                     <ListaProyectos />
                 </Route>
 
-                <Route path="/maquetado" exact={true}>
+                <Route path="/maquetado/:id" exact={true}>
                     <Maquetado />
                 </Route>
 
