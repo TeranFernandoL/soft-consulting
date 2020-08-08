@@ -24,42 +24,41 @@ export default function FormActividadesProyecto() {
 
     return (
         <Form className="m-4">
-        <Form.Group >
-        <h3 style={{textAlign: "center"}}>Actividades: {nombre}</h3>
-        </Form.Group>
+            <Form.Group >
+            <h3 style={{textAlign: "center"}}>Actividades: {nombre}</h3>
+            </Form.Group>
 
-        <Form.Row>
-            <Form.Group as={Col} md="1"></Form.Group>
-            <Form.Group as={Col} md="6">
-                <br></br><Form.Label>Seleccionar requerimientos generales: </Form.Label>
-            </Form.Group>
-            <Form.Group as={Col} md="1"></Form.Group>
-            <Form.Group as={Col} md="3">
-                <br></br><Button onClick={actividadRequerimientosGenerales}>Comenzar</Button>
-            </Form.Group>
-        </Form.Row>
-        <Form.Row>
-            <Form.Group as={Col} md="1"></Form.Group>
-            <Form.Group as={Col} md="6">
-                <br></br><Form.Label>Especificar requerimientos personalizados: </Form.Label>
-            </Form.Group>
-            <Form.Group as={Col} md="1"></Form.Group>
-            <Form.Group as={Col} md="3">
-                <br></br><Button onClick={actividadRequerimientosEspecificos}>Comenzar</Button>
-            </Form.Group>
-        </Form.Row>
-        <Form.Row>
-            <Form.Group as={Col} md="1"></Form.Group>
-            <Form.Group as={Col} md="6">
-                <br></br><Form.Label>Iniciar maquetado de interfaces: </Form.Label>
-            </Form.Group>
-            <Form.Group as={Col} md="1"></Form.Group>
-            <Form.Group as={Col} md="3">
-                <br></br><Button onClick={actividadMaquetado}>Comenzar</Button>
-            </Form.Group>
-        </Form.Row>
-        
-      </Form>
+            <Form.Row>
+                <Form.Group as={Col} md="1"></Form.Group>
+                <Form.Group as={Col} md="6">
+                    <br></br><Form.Label>Seleccionar requerimientos generales: </Form.Label>
+                </Form.Group>
+                <Form.Group as={Col} md="1"></Form.Group>
+                <Form.Group as={Col} md="3">
+                    <br></br><Button onClick={actividadRequerimientosGenerales}>Comenzar</Button>
+                </Form.Group>
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} md="1"></Form.Group>
+                <Form.Group as={Col} md="6">
+                    <br></br><Form.Label>Especificar requerimientos personalizados: </Form.Label>
+                </Form.Group>
+                <Form.Group as={Col} md="1"></Form.Group>
+                <Form.Group as={Col} md="3">
+                    <br></br><Button onClick={actividadRequerimientosEspecificos}>Comenzar</Button>
+                </Form.Group>
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} md="1"></Form.Group>
+                <Form.Group as={Col} md="6">
+                    <br></br><Form.Label>Iniciar maquetado de interfaces: </Form.Label>
+                </Form.Group>
+                <Form.Group as={Col} md="1"></Form.Group>
+                <Form.Group as={Col} md="3">
+                    <br></br><Button onClick={actividadMaquetado}>Comenzar</Button>
+                </Form.Group>
+            </Form.Row>
+        </Form>
     );
 
 }
