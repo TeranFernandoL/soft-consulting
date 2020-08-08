@@ -29,16 +29,16 @@ export default function Nav(){
 }
 
 function Deslogueo(){
-    // const token = localStorage.getItem('TIRS_token');
-    // if(token.length < 3) return (<></>)
+    const token = localStorage.getItem('TIRS_token');
+    if(token.length < 3) return (<></>)
     
-    // const deslogueo = () => {
-    //     setJsonStorage('TIRS_token', '');
-    //     setJsonStorage('TIRS_usuario', '');
-    //     setJsonStorage('modalProps', '');
-    // }
+    const deslogueo = () => {
+        setJsonStorage('TIRS_token', '');
+        setJsonStorage('TIRS_usuario', '');
+        setJsonStorage('modalProps', '');
+    }
     return(
-        // <Button href='/' onClick={deslogueo}>Deslogueo</Button>
-        <></>
+        <Button href='/' onClick={deslogueo}>Deslogueo</Button>
     )
 }
+
