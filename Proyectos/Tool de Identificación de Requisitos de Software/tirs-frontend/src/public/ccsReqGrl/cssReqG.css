@@ -1,0 +1,16 @@
+.titulos1{
+    color: white;
+    width: 50%;
+    border-radius: 8px;
+}
+.marco{
+
+    color: white;
+    border: 2px solid rgb(50, 7, 70);
+    border-radius: 4px;
+    background: url(../img01.jpg) no-repeat fixed center ;
+    
+}
+.imagen{
+    column-rule: 5px solid #f8f8f8;
+}
