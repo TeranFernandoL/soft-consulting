@@ -28,14 +28,8 @@ export default function Nav(){
     );
 }
 
-
 function Deslogueo(){
-    
-    return (<></>)
-    
-    
-    
-    /*const token = localStorage.getItem('TIRS_token');
+    const token = localStorage.getItem('TIRS_token');
     if(token.length < 3) return (<></>)
     
     const deslogueo = () => {
@@ -45,5 +39,6 @@ function Deslogueo(){
     }
     return(
         <Button href='/' onClick={deslogueo}>Deslogueo</Button>
-    )*/
+    )
 }
+
