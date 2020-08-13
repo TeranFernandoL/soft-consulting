@@ -64,6 +64,15 @@ class DeleteProjectAPIView(generics.GenericAPIView):
         return Response({"detail": "OK"}, status=status.HTTP_200_OK)
 
 
+class ListGeneralRequirementAPIView(generics.ListAPIView):
+    permission_classes = IsAuthenticated,
+    serializer_class = GeneralRequirementViewSerializer
+
+    def get_queryset(self):
+        queryset = GeneralRequeriments.objects.all()
+        return queryset
+
+
 class InviteProjectAPIView(generics.GenericAPIView):
     permission_classes = IsAuthenticated,
     serializer_class = InviteProjectSerializer

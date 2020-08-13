@@ -60,3 +60,11 @@ class InviteProjectSerializer(serializers.Serializer):
         if not User.objects.filter(email=email):
             raise serializers.ValidationError({"email": "Email mismatch"})
         return attrs
+
+
+class GeneralRequirementViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GeneralRequeriments
+        fields = '__all__'
+
+

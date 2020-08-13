@@ -14,12 +14,23 @@ class Requirement(TimesStampedModel):
     cost = models.FloatField(verbose_name='costo', blank=True, null=True)
     creation_date = models.DateTimeField(verbose_name='fecha de creacion', blank=True, null=True)
     show = models.BooleanField(verbose_name='mostrar', default=False)
-    #projects = models.ManyToManyField(projects, related_name='projects', through='Project_Requirement')
+    projects = models.ManyToManyField(Project, related_name='requeriments', through='Project_Requirement', blank=True)
+
+    # projects = models.ManyToManyField(projects, related_name='projects', through='Project_Requirement')
 
     def __str__(self):
         return "{} - {}".format(self.id, self.name)
 
+
 class Project_Requirement(TimesStampedModel):
-    requirement = models.ForeignKey(Requirement, related_name= 'Clave_foranea_requerimiento', blank=True, null=True, on_delete= models.CASCADE)
-    project = models.ForeignKey(Project,related_name='Clave_foranea_proyectos', blank=True, null=True, on_delete= models.CASCADE)
-    confirmation = models.BooleanField(verbose_name='confirmacion', default=False)
+    requirement = models.ForeignKey(Requirement, related_name='project_requirements', blank=True, null=True,
+                                    on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, related_name='project_requirements', blank=True, null=True,
+                                on_delete=models.CASCADE)
+    confirmation = models.BooleanField(verbose_name='project_requirements', default=False)
+
+    def __str__(self):
+        return "{}".format(self.id)
+
+    class Meta:
+        unique_together = ('project', 'requirement')

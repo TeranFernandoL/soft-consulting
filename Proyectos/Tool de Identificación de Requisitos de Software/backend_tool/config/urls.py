@@ -46,6 +46,10 @@ urlpatterns = [
                       "api/v1/projects/",
                       include("apps.projects.urls", namespace="proyectos"),
                   ),
+                  path(
+                      "api/v1/requirement/",
+                      include("apps.requirements.urls", namespace="requirements"),
+                  ),
 
                   re_path(r'^swagger(?P<format>\.json|\.yaml)/$', schema_view.without_ui(cache_timeout=None),
                           name='schema-json'),

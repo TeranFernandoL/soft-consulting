@@ -5,3 +5,4 @@ djangorestframework==3.8.2
 psycopg2-binary==2.8.5
 drf-yasg==1.10.0
 Pillow==7.2.0
+jsonfield==2.0.2
