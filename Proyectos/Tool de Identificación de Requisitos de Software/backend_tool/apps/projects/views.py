@@ -69,7 +69,7 @@ class ListGeneralRequirementAPIView(generics.ListAPIView):
     serializer_class = GeneralRequirementViewSerializer
 
     def get_queryset(self):
-        queryset = GeneralRequeriments.objects.all()
+        queryset = GeneralRequeriments.objects.all().order_by('name')
         return queryset
 
 

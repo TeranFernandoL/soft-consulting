@@ -34,6 +34,18 @@ class Project(TimesStampedModel):
     def __str__(self):
         return "{} - {}".format(self.id, self.name)
 
+    @property
+    def check_general(self):
+        list = []
+        for i in GeneralRequeriments.objects.all():
+            if i.id in self.general_requeriments.values_list('id', flat=True):
+                json_temp = {"id": i.id, "name": i.name, "confirmation": True}
+            else:
+                json_temp = {"id": i.id, "name": i.name, "confirmation": False}
+            list.append(json_temp)
+        return list
+
+
 class UserProject(TimesStampedModel):
     project = models.ForeignKey(Project, related_name='user_projects', blank=True, null=True, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='user_projects', blank=True, null=True,

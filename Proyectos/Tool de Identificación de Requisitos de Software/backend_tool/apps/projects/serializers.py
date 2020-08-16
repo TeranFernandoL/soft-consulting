@@ -12,6 +12,7 @@ from django.template import loader
 from apps.users.serializers import RetrieveUserSerializer
 from .models import *
 from apps.users.models import User
+from apps.serializers import *
 
 
 class UserProjectSerializer(serializers.ModelSerializer):
@@ -31,12 +32,13 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ProjectViewSerializer(serializers.ModelSerializer):
+class ProjectViewSerializer(CustomSerializer):
     users = RetrieveUserSerializer(many=True)
 
     class Meta:
         model = Project
         fields = '__all__'
+        extra_fields = ['check_general']
         read_only_fields = ('id',)
 
 
@@ -66,5 +68,3 @@ class GeneralRequirementViewSerializer(serializers.ModelSerializer):
     class Meta:
         model = GeneralRequeriments
         fields = '__all__'
-
-
