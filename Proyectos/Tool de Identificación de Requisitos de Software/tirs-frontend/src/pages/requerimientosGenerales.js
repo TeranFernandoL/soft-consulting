@@ -14,7 +14,7 @@ export default function RequerimientosGenerales() {
 
         <>
         <br></br>
-        <Container style={{ textAlign: "center"}} className=" container marco  p-5">
+        <Container style={{ textAlign: "center"}} className=" container p-5">
                        
             <br></br><br></br>
             <h1>"Proyecto" - Requerimientos Generales</h1>
