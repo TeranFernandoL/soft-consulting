@@ -21,4 +21,11 @@
     border: 4px solid rgb(255, 255, 255);
 }
 
-
+.borLog{
+    color: white;
+    border-radius: 8px;
+    border: 4px solid rgb(3, 0, 0);
+    background: url(../fon2.jpg) no-repeat fixed center ;
+    background-size: cover;
+    background-position: cover;
+}
