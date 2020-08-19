@@ -2,7 +2,6 @@ import React from 'react';
 import {Container, Navbar, Button} from 'react-bootstrap';
 import LogoRedux from '../../public/redux.png';
 import {setJsonStorage} from '../../lib/jsonStorages';
-
 import '../../public/nav.scss';
 
 export default function Nav(){
@@ -29,16 +28,17 @@ export default function Nav(){
 }
 
 function Deslogueo(){
-    const token = localStorage.getItem('TIRS_token');
+    /*const token = localStorage.getItem('TIRS_token');
     if(token.length < 3) return (<></>)
     
     const deslogueo = () => {
         setJsonStorage('TIRS_token', '');
         setJsonStorage('TIRS_usuario', '');
         setJsonStorage('modalProps', '');
-    }
+    }*/
     return(
-        <Button href='/' onClick={deslogueo}>Deslogueo</Button>
+        //<Button href='/' onClick={deslogueo}>Deslogueo</Button>
+        <> </>
     )
 }
 
