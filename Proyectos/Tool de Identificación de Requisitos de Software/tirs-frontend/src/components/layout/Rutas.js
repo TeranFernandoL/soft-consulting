@@ -35,11 +35,11 @@ export default function Rutas() {
                 </Route>
 
                 <Route path="/requerimientos-generales/:id" exact={true}>
-                    <RequerimientosGenerales setState={setState} state={true}/>
+                    <RequerimientosGenerales setState={setState}/>
                 </Route>
 
                 <Route path="/requerimientos-especificos/:id" exact={true}>
-                    <RequerimientosEspecificos setState={setState} state={true}/>
+                    <RequerimientosEspecificos setState={setState}/>
                 </Route>
 
                 <Route path="/listaProyectos" exact={true}>
@@ -47,15 +47,15 @@ export default function Rutas() {
                 </Route>
 
                 <Route path="/documentacion/:id" exact={true}>
-                    <Documentacion setState={setState} state={true}/>
+                    <Documentacion setState={setState}/>
                 </Route>
                 
                 <Route path="/actores/:id" exact={true}>
-                    <Actores setState={setState} state={true}/>
+                    <Actores setState={setState}/>
                 </Route>
 
                 <Route path="/validacion/:id" exact={true}>
-                    <Validacion setState={setState} state={true}/>
+                    <Validacion setState={setState}/>
                 </Route>
 
                 <Route path="*"><Error404/></Route>
