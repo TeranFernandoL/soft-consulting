@@ -89,7 +89,7 @@ export default function FormNuevoProyecto() {
                 <option value="INFORMATIVA">Pagina informativa</option>
                 <option value="CORPORATIVA">Pagina Corporativa</option>
                 <option value="OTROS">Otros</option>
-                </Form.Control>
+              </Form.Control>
           </Form.Group>
           
         </Form.Row>
@@ -110,19 +110,19 @@ export default function FormNuevoProyecto() {
           <Form.Group as={Col} md="6">
             <Form.Row>
                 <Form.Group as={Col} md="1"><Form.Check  type="checkbox"/></Form.Group>
-                <Form.Group as={Col} md="11"><Form.Label>Item </Form.Label> </Form.Group>
+                <Form.Group as={Col} md="11"><Form.Label>Descripcion </Form.Label> </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} md="1"><Form.Check  type="checkbox"/></Form.Group>
-                <Form.Group as={Col} md="11"><Form.Label>Item </Form.Label> </Form.Group>
+                <Form.Group as={Col} md="11"><Form.Label>Lista de requerimientos </Form.Label> </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} md="1"><Form.Check  type="checkbox"/></Form.Group>
-                <Form.Group as={Col} md="11"><Form.Label>Item </Form.Label> </Form.Group>
+                <Form.Group as={Col} md="11"><Form.Label>Prototipado </Form.Label> </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} md="1"><Form.Check  type="checkbox"/></Form.Group>
-                <Form.Group as={Col} md="11"><Form.Label>Item </Form.Label> </Form.Group>
+                <Form.Group as={Col} md="11"><Form.Label>Historias de usuario </Form.Label> </Form.Group>
             </Form.Row>
 
           </Form.Group>
@@ -130,15 +130,15 @@ export default function FormNuevoProyecto() {
           <Form.Group as={Col} md="6">
             <Form.Row>
                 <Form.Group as={Col} md="1"><Form.Check  type="checkbox"/></Form.Group>
-                <Form.Group as={Col} md="11"><Form.Label>Item </Form.Label> </Form.Group>
+                <Form.Group as={Col} md="11"><Form.Label>Entrevistas </Form.Label> </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} md="1"><Form.Check  type="checkbox"/></Form.Group>
-                <Form.Group as={Col} md="11"><Form.Label>Item </Form.Label> </Form.Group>
+                <Form.Group as={Col} md="11"><Form.Label>Actividad 6 </Form.Label> </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} md="1"><Form.Check  type="checkbox"/></Form.Group>
-                <Form.Group as={Col} md="11"><Form.Label>Item </Form.Label> </Form.Group>
+                <Form.Group as={Col} md="11"><Form.Label>Actividad 7 </Form.Label> </Form.Group>
             </Form.Row>
 
           </Form.Group>

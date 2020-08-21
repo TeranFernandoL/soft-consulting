@@ -9,8 +9,10 @@ import TablaProyectos from '../components/ListaProyectos/tablaProyectos'
 import FormNuevoProyecto from '../components/ListaProyectos/formNuevoProyecto'
 import ModalAgregarProyecto from '../components/Modales/modal'
 
-export default function ListaProyectos() {    
+export default function ListaProyectos(props) {    
     const proyectos = useFetch('/projects/')
+    const {setState,state} = props; setState(state);
+
     const [isOpenModalAgregar, setIsOpenModalAgregar] = useState(false);
 
     const openModalAgregar = () => {
@@ -21,24 +23,20 @@ export default function ListaProyectos() {
         setIsOpenModalAgregar(false);
     }
 
- 
+    const usuario = getJsonStorage('TIRS_usuario');
+    
 
     return (
-        <>
-            <br></br><br></br>
-            <h3 style={{textAlign: "center"}}>Lista de Proyectos</h3>
-            <Container>
-                <br />
-                <>
-                <button type="button" className="btn btn-success" onClick = {openModalAgregar}>Nuevo Proyecto</button>
-                <br /><br />
-                <ModalAgregarProyecto isOpenModal = {isOpenModalAgregar} closeModal= {closeModalAgregar}><FormNuevoProyecto /></ModalAgregarProyecto>
-                {/* <ModalModificarProyecto ><FormModificarProyecto /></ModalModificarProyecto> */}
-                <TablaProyectos proyectos = {proyectos}/>
-                </>
-            </Container>
-            
-        </>
+        <Container>
+        <br></br><br></br>
+        <h3 style={{textAlign: "center"}}>Lista de Proyectos: {usuario.first_name}</h3>
+            <button type="button" className="btn btn-success" onClick = {openModalAgregar}>Nuevo Proyecto</button>
+            <ModalAgregarProyecto isOpenModal = {isOpenModalAgregar} closeModal= {closeModalAgregar} >
+                <FormNuevoProyecto /> 
+            </ModalAgregarProyecto>
+            <br /><br />
+            <TablaProyectos proyectos = {proyectos}/>
+        </Container>
     );
 
 };

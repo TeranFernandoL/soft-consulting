@@ -3,12 +3,11 @@ import {Row, Col, Form, Container} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import {metodoGeneral} from '../lib/metodos.js' //mandar json al back
 import {setJsonStorage} from '../lib/jsonStorages'
+import '../public/csshome/cssjh.css';
 
-export default function Login() {
+export default function Login(props) {
+    const {setState,state} = props; setState(state);
     const history = useHistory();
-
-    // const logueoExitoso = 1;
-
     const login = async (e) => {
         e.preventDefault();
         const email = document.getElementById('login-email').value ;
@@ -38,31 +37,35 @@ export default function Login() {
 
     return (
       <>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br><br></br><br></br><br></br><br></br>
+        
 
-        <Container md="4">
-          <Form onSubmit={login}>
-            <Row>
+        <Container md="4" >
+          <Form  onSubmit={login}>
+            
+            <Row  >
                   <Col md="3"></Col>
-                  <Col md="6">
-                  <h3 style={{textAlign: "center"}}>Ingresar a TIRS</h3>
-  
+                  <Col className=" pt-5 p-5" md="6">
+                  <h3 style={{textAlign: "center"}}>Login TIRS</h3>
+                  <br></br>
+                  <div align="center">
+                  <img src="user1.png" width="120" height="120" ></img>
+                  </div>
+                  <br></br>
                   <div className="form-group">
-                      <label>Email</label>
-                      <input type="email" className="form-control" name="email" id='login-email'/>
+                      <label>Email Address</label>
+                      <input type="email" className="form-control" name="email" id='login-email' 
+                      placeholder="Correo electrónico" autofocus required/>
                   </div>
   
                   <div className="form-group">
-                      <label>Contraseña</label>
-                      <input type="password" className="form-control" name="contraseña" id='login-contraseña'/>
+                      <label>Password</label>
+                      <input type="password" className="form-control" name="contraseña" id='login-contraseña'
+                      placeholder="Contraseña" required/>
                   </div>
                   <br></br>
 
                   <button type="submit" className="btn btn-primary btn-block">Ingresar</button>
+                  <a href="/registro" className="btn btn-secondary btn-block mb-2" type="s">Registrarse</a>
                   <div style={{color: "#FF0000"}} id="login-mensaje-error"></div>
                   </Col>
             </Row>

@@ -1,17 +1,18 @@
 import React, {useState} from "react";
 import useFetch from '../../hooks/useFetch'
-import {useLayoutEffect} from 'react';
 import {setFecha} from '../../lib/metodos'
 import {Container} from 'react-bootstrap';
 import {ruta} from '../../lib/ruta'
-import {setJsonStorage, getJsonStorage} from '../../lib/jsonStorages'
+import {setJsonStorage} from '../../lib/jsonStorages'
 
 import FormModificarProyecto from './formModificarProyecto'
 import FormCompartirProyecto from './formCompartirProyecto'
 import FormEliminarProyecto from './formEliminarProyecto'
+import FromActividadesProyecto from './fromActividadesProyecto'
 import ModalModificarProyecto from '../Modales/modal'
 import ModalCompartirProyecto from '../Modales/modal'
 import ModalEliminarProyecto from '../Modales/modal'
+import ModalActividades from '../Modales/modalSmall'
 
 
 
@@ -20,7 +21,9 @@ export default function TablaProyectos(props) {
     const [isOpenModalModificar, setIsOpenModalModificar] = useState(false);
     const [isOpenModalCompartir, setIsOpenModalCompartir] = useState(false);
     const [isOpenModalEliminar, setIsOpenModalEliminar] = useState(false);
-
+    const [isOpenModalActividades, setIsOpenModalActividades] = useState(false);
+    // const [aux, setAux] = useState({});
+     
     const openModalModificar = (e) => {
         const tr = e.target.parentElement.parentElement;
         const id = tr.firstElementChild.textContent;
@@ -31,7 +34,7 @@ export default function TablaProyectos(props) {
         const proyectoModificar = {
             id, nombre, descripcion, rubro
         }
-
+        // setAux(proyectoModificar)
         setJsonStorage('modalProps',proyectoModificar);
 
         setIsOpenModalModificar(true);
@@ -60,8 +63,9 @@ export default function TablaProyectos(props) {
     const openModalEliminar = (e) => {
         const tr = e.target.parentElement.parentElement;
         const id = tr.firstElementChild.textContent;
+        const nombre = tr.firstElementChild.nextSibling.textContent;
         const proyectoEliminar = {
-            id
+            id, nombre
         }
 
         setJsonStorage('modalProps',proyectoEliminar);
@@ -72,18 +76,35 @@ export default function TablaProyectos(props) {
         setIsOpenModalEliminar(false);
     }
 
+    const openModalActividades = (e) => {
+        const tr = e.target.parentElement.parentElement;
+        const id = tr.firstElementChild.textContent;
+        const nombre = tr.firstElementChild.nextSibling.textContent;
+        const proyectoActividades = {
+            id, nombre
+        }
+
+        setJsonStorage('modalProps',proyectoActividades);
+        setIsOpenModalActividades(true);
+    }
+    const closeModalActividades = () => {
+        setJsonStorage('modalProps','');
+        setIsOpenModalActividades(false);
+    }
+
     if(proyectos.loading || !proyectos.result){
         return "loading..."
     }
-    
-        
+          
     const proyects = proyectos.result;    
-    
+     
     return (
         <>
-            <ModalModificarProyecto isOpenModal={isOpenModalModificar} closeModal={closeModalModificar}><FormModificarProyecto /></ModalModificarProyecto>
-            <ModalCompartirProyecto isOpenModal={isOpenModalCompartir} closeModal={closeModalCompartir}><FormCompartirProyecto /></ModalCompartirProyecto>
-            <ModalEliminarProyecto isOpenModal={isOpenModalEliminar} closeModal={closeModalEliminar}><FormEliminarProyecto /></ModalEliminarProyecto>
+            {/* <ModalModificarProyecto isOpenModal={isOpenModalModificar} closeModal={closeModalModificar}>      <FormModificarProyecto aux={aux} setAux={setAux}/>   </ModalModificarProyecto> */}
+            <ModalModificarProyecto isOpenModal={isOpenModalModificar} closeModal={closeModalModificar}>      <FormModificarProyecto />   </ModalModificarProyecto>
+            <ModalCompartirProyecto isOpenModal={isOpenModalCompartir} closeModal={closeModalCompartir}>      <FormCompartirProyecto />   </ModalCompartirProyecto>
+            <ModalEliminarProyecto isOpenModal={isOpenModalEliminar} closeModal={closeModalEliminar}>         <FormEliminarProyecto />    </ModalEliminarProyecto>
+            <ModalActividades isOpenModal={isOpenModalActividades} closeModal={closeModalActividades}>        <FromActividadesProyecto/>  </ModalActividades>
             <table className ="table table-hover">
                 <thead className = "table-secondary">
                     <tr>
@@ -102,6 +123,7 @@ export default function TablaProyectos(props) {
                         openModalModificar = {openModalModificar}
                         openModalCompartir ={openModalCompartir}
                         openModalEliminar ={openModalEliminar}
+                        openModalActividades = {openModalActividades}
                         />
                     })}
                 </tbody>
@@ -121,7 +143,7 @@ function Proyecto(props){
         description,
         creation_date, 
         confirmation
-    },  openModalModificar, openModalCompartir, openModalEliminar} = props;
+    },  openModalModificar, openModalCompartir, openModalEliminar, openModalActividades} = props;
     
     const fecha_creacion = setFecha(creation_date);
 
@@ -143,11 +165,10 @@ function Proyecto(props){
             <td>{fecha_creacion}</td>
             <td>{estado}</td>
             <td>
-            <button type="button" className="btn btn-primary" id={`modificar_proyecto_${id}`}  onClick={openModalModificar}>Modificar</button>{"  "}
-            <button type="button" className="btn btn-primary" id={`compartir_proyecto_${id}`}  onClick={openModalCompartir}>Compartir</button>{"  "}
-            <button type="button" className="btn btn-danger"  id={`eliminar_proyecto_${id}`}   onClick={openModalEliminar}>Eliminar</button>
-            <button type="button" className="btn btn-danger" >Trabajar</button>{"  "}
-
+                <button type="button" className="btn btn-primary" onClick={openModalModificar}  >Modificar  </button>{"  "}
+                <button type="button" className="btn btn-primary" onClick={openModalCompartir}  >Compartir  </button>{"  "}
+                <button type="button" className="btn btn-danger"  onClick={openModalEliminar}   >Eliminar   </button>
+                <button type="button" className="btn btn-danger"  onClick={openModalActividades}>Actividades</button>{"  "}
             </td>
         </tr>
     );
