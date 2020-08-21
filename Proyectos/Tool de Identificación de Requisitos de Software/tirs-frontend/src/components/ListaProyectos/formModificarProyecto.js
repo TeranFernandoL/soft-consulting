@@ -3,9 +3,7 @@ import {Form, Button, Col} from 'react-bootstrap';
 import {getJsonStorage} from '../../lib/jsonStorages'
 import {metodoGeneral} from '../../lib/metodos'
 
-
-
-export default function FormModificarProyecto() {
+export default function FormModificarProyecto(props) {
     const {id, nombre, descripcion, rubro} = getJsonStorage('modalProps');
     const [validated, setValidated] = useState(false);
     const [formValue, setFormValue] = useState({
@@ -35,9 +33,6 @@ export default function FormModificarProyecto() {
             description: formValue.descripcion,
         }
 
-        console.log(modificarProyecto);
-        
-
         const res = await metodoGeneral('/projects/'+ formValue.id,'PATCH',modificarProyecto)  //mandar objeto al back para el registro
 
         if(res == 0){
@@ -52,16 +47,8 @@ export default function FormModificarProyecto() {
       setValidated(true)
       
     };
-    
-    const crearCheckBox = (nombre, valor) => {
-      if(valor == 1){
-          return (<Form.Check type="checkbox" id={`checkbox_modificar_${nombre}`} name={nombre} defaultChecked/>);
-      }
-      return (<Form.Check type="checkbox"  id={`checkbox_modificar_${nombre}`}  name={nombre}/>);
-    }
 
     return (
-      
       <Form noValidate 
       validated={validated} onSubmit={handleSubmit} onChange={onChange} 
       className="m-4">
@@ -86,7 +73,7 @@ export default function FormModificarProyecto() {
             <Form.Label>Tipo/Rubro</Form.Label> 
           </Form.Group>
           <Form.Group as={Col} md="9">
-            <Form.Control as="select" defaultValue={rubro} >
+            <Form.Control as="select" name="rubro" defaultValue={rubro} >
                 <option value="VENTAS_ONLINE">Ventas online</option>
                 <option value="BLOG">Blog</option>
                 <option value="INFORMATIVA">Pagina informativa</option>
@@ -116,5 +103,4 @@ export default function FormModificarProyecto() {
         </div>
       </Form>
     );
-
 }

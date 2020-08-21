@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom';
 import {metodoGeneral} from '../lib/metodos.js' 
 import {setJsonStorage} from '../lib/jsonStorages'
 
-export default function Registro() {
+export default function Registro(props) {
+    const {setState,state} = props; setState(state);
     const history = useHistory();
     const [validated, setValidated] = useState(false);
 

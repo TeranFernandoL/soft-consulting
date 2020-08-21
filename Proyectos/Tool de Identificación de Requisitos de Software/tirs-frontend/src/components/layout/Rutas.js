@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -6,47 +6,56 @@ import Error404 from '../../pages/error404'
 import Home from '../../pages/home'
 import ListaProyectos from '../../pages/listaProyectos'
 import Login from '../../pages/login'
-import Maquetado from '../../pages/maquetado'
+import Documentacion from '../../pages/documentacion'
 import Registro from '../../pages/registro'
 import RequerimientosGenerales from '../../pages/requerimientosGenerales'
 import RequerimientosEspecificos from '../../pages/requerimientosEspecificos'
 import Validacion from '../../pages/validacion'
-
+import Actores from '../../pages/actores'
+import Navegacion from './Navegacion'
 
 export default function Rutas() {
+    const [state, setState] = useState(false);
+
     return(
         <Router>
+            <Navegacion state={state}/>
+
             <Switch>
                 <Route path="/" exact={true}>
-                    <Home />
+                    <Home setState={setState} state={false}/>
                 </Route>
 
                 <Route path="/login" exact={true}>
-                    <Login />
+                    <Login setState={setState}state={false}/>
                 </Route>
 
                 <Route path="/registro" exact={true}>
-                    <Registro />
+                    <Registro setState={setState} state={false}/>
                 </Route>
 
                 <Route path="/requerimientos-generales/:id" exact={true}>
-                    <RequerimientosGenerales />
+                    <RequerimientosGenerales setState={setState}/>
                 </Route>
 
                 <Route path="/requerimientos-especificos/:id" exact={true}>
-                    <RequerimientosEspecificos />
+                    <RequerimientosEspecificos setState={setState}/>
                 </Route>
 
                 <Route path="/listaProyectos" exact={true}>
-                    <ListaProyectos />
+                    <ListaProyectos setState={setState} state={false}/>
                 </Route>
 
-                <Route path="/maquetado/:id" exact={true}>
-                    <Maquetado />
+                <Route path="/documentacion/:id" exact={true}>
+                    <Documentacion setState={setState}/>
+                </Route>
+                
+                <Route path="/actores/:id" exact={true}>
+                    <Actores setState={setState}/>
                 </Route>
 
-                <Route path="/validacion" exact={true}>
-                    <Validacion />
+                <Route path="/validacion/:id" exact={true}>
+                    <Validacion setState={setState}/>
                 </Route>
 
                 <Route path="*"><Error404/></Route>

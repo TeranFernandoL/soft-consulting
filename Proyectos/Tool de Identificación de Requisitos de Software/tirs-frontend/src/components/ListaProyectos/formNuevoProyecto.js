@@ -89,7 +89,7 @@ export default function FormNuevoProyecto() {
                 <option value="INFORMATIVA">Pagina informativa</option>
                 <option value="CORPORATIVA">Pagina Corporativa</option>
                 <option value="OTROS">Otros</option>
-                </Form.Control>
+              </Form.Control>
           </Form.Group>
           
         </Form.Row>

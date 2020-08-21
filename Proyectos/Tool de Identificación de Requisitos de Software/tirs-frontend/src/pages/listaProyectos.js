@@ -9,8 +9,9 @@ import TablaProyectos from '../components/ListaProyectos/tablaProyectos'
 import FormNuevoProyecto from '../components/ListaProyectos/formNuevoProyecto'
 import ModalAgregarProyecto from '../components/Modales/modal'
 
-export default function ListaProyectos() {    
+export default function ListaProyectos(props) {    
     const proyectos = useFetch('/projects/')
+    const {setState,state} = props; setState(state);
 
     const [isOpenModalAgregar, setIsOpenModalAgregar] = useState(false);
 
@@ -29,15 +30,12 @@ export default function ListaProyectos() {
         <Container>
         <br></br><br></br>
         <h3 style={{textAlign: "center"}}>Lista de Proyectos: {usuario.first_name}</h3>
-            <br />
-            <>
             <button type="button" className="btn btn-success" onClick = {openModalAgregar}>Nuevo Proyecto</button>
-            <br /><br />
             <ModalAgregarProyecto isOpenModal = {isOpenModalAgregar} closeModal= {closeModalAgregar} >
                 <FormNuevoProyecto /> 
             </ModalAgregarProyecto>
+            <br /><br />
             <TablaProyectos proyectos = {proyectos}/>
-            </>
         </Container>
     );
 
