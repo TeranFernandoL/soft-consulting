@@ -11,17 +11,7 @@ export default function Navegacion(props){
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">
-                    <img 
-                        alt="Planilla Fugusa" 
-                        src={LogoRedux}
-                        id='LogoRedux'
-                        width="30"
-                        height="30"
-                        className="d-inline-block aling top mr-4"
-                    />
-                    TIRS
-                </Navbar.Brand>
+                {labelTIRS()}
                 {barraNavegacion(state)}
                 <Form inline>
                     {Deslogueo()}
@@ -43,6 +33,37 @@ function Deslogueo(){
     return(
         <Button href='/' onClick={deslogueo} variant="outline-info" >Deslogueo</Button>
     )
+}
+
+function labelTIRS(){
+    const token = localStorage.getItem('TIRS_token');
+    if(token.length < 3) 
+    return (
+        <Navbar.Brand href="/">
+            <img 
+                alt="Planilla Fugusa" 
+                src={LogoRedux}
+                id='LogoRedux'
+                width="30"
+                height="30"
+                className="d-inline-block aling top mr-4"
+            />
+            TIRS
+        </Navbar.Brand>
+    )
+    return (
+        <Navbar.Brand href="/ListaProyectos">
+        <img 
+            alt="Planilla Fugusa" 
+            src={LogoRedux}
+            id='LogoRedux'
+            width="30"
+            height="30"
+            className="d-inline-block aling top mr-4"
+        />
+        TIRS
+    </Navbar.Brand>
+    );
 }
 
 function barraNavegacion(state){
