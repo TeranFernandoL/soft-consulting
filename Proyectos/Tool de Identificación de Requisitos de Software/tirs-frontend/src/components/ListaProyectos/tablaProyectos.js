@@ -167,8 +167,9 @@ function Proyecto(props){
             <td>
                 <button type="button" className="btn btn-primary" onClick={openModalModificar}  >Modificar  </button>{"  "}
                 <button type="button" className="btn btn-primary" onClick={openModalCompartir}  >Compartir  </button>{"  "}
+                <button type="button" className="btn btn-primary" onClick={openModalModificar}  >Modificar  </button>
                 <button type="button" className="btn btn-danger"  onClick={openModalEliminar}   >Eliminar   </button>
-                <button type="button" className="btn btn-danger"  onClick={openModalActividades}>Actividades</button>{"  "}
+                <button type="button" className="btn btn-danger"  onClick={openModalActividades}>Actividades</button>
             </td>
         </tr>
     );
