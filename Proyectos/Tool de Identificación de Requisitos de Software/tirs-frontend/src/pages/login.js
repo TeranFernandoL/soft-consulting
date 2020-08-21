@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom';
 import {metodoGeneral} from '../lib/metodos.js' //mandar json al back
 import {setJsonStorage} from '../lib/jsonStorages'
 
-export default function Login() {
+export default function Login(props) {
+    const {setState,state} = props; setState(state);
     const history = useHistory();
     const login = async (e) => {
         e.preventDefault();

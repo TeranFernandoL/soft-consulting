@@ -2,7 +2,8 @@ import React from 'react';
 import '../public/csshome/cssjh.css';
 
 
-export default function Home() {
+export default function Home(props) {
+    const {setState,state} = props; setState(state);
     return (
 
         <>

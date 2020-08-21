@@ -1,14 +1,13 @@
 import React from 'react';
-
 import Rutas from './components/layout/Rutas'
-import Nav from './components/layout/Nav'
 
 function App() {
+  if(localStorage.getItem('TIRS_token') == undefined){
+    localStorage.setItem('TIRS_token', '')
+  }
+
   return (
-    <>
-      <Nav />
       <Rutas />
-    </>
   );
 }
 

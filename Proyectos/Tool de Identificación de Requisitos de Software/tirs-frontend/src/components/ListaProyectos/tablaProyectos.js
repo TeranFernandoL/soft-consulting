@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import useFetch from '../../hooks/useFetch'
-import {useLayoutEffect} from 'react';
 import {setFecha} from '../../lib/metodos'
 import {Container} from 'react-bootstrap';
 import {ruta} from '../../lib/ruta'
@@ -23,7 +22,8 @@ export default function TablaProyectos(props) {
     const [isOpenModalCompartir, setIsOpenModalCompartir] = useState(false);
     const [isOpenModalEliminar, setIsOpenModalEliminar] = useState(false);
     const [isOpenModalActividades, setIsOpenModalActividades] = useState(false);
-    
+    // const [aux, setAux] = useState({});
+     
     const openModalModificar = (e) => {
         const tr = e.target.parentElement.parentElement;
         const id = tr.firstElementChild.textContent;
@@ -34,7 +34,7 @@ export default function TablaProyectos(props) {
         const proyectoModificar = {
             id, nombre, descripcion, rubro
         }
-
+        // setAux(proyectoModificar)
         setJsonStorage('modalProps',proyectoModificar);
 
         setIsOpenModalModificar(true);
@@ -97,9 +97,10 @@ export default function TablaProyectos(props) {
     }
           
     const proyects = proyectos.result;    
-
+     
     return (
         <>
+            {/* <ModalModificarProyecto isOpenModal={isOpenModalModificar} closeModal={closeModalModificar}>      <FormModificarProyecto aux={aux} setAux={setAux}/>   </ModalModificarProyecto> */}
             <ModalModificarProyecto isOpenModal={isOpenModalModificar} closeModal={closeModalModificar}>      <FormModificarProyecto />   </ModalModificarProyecto>
             <ModalCompartirProyecto isOpenModal={isOpenModalCompartir} closeModal={closeModalCompartir}>      <FormCompartirProyecto />   </ModalCompartirProyecto>
             <ModalEliminarProyecto isOpenModal={isOpenModalEliminar} closeModal={closeModalEliminar}>         <FormEliminarProyecto />    </ModalEliminarProyecto>
