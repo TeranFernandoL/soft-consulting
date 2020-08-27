@@ -54,7 +54,7 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'apps.users',
-    'apps.projects',
+    'apps.projects.apps.ProjectsConfig',
     'apps.requirements'
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -78,7 +78,7 @@ TEMPLATES = [
         'OPTIONS': {
             # https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
             'debug': DEBUG,
-                           # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
+            # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
             # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
             'loaders': [
                 'django.template.loaders.filesystem.Loader',

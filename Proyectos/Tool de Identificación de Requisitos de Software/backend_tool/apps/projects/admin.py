@@ -5,4 +5,5 @@ from .models import *
 
 admin.site.register(Project)
 admin.site.register(UserProject)
+admin.site.register(Actor)
 admin.site.register(GeneralRequeriments)

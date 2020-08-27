@@ -8,4 +8,6 @@ urlpatterns = [
     path("out", view=DeleteProjectAPIView.as_view(), name="BORRAR PROYECTO"),
     path("invite", view=InviteProjectAPIView.as_view(), name="INVITAR AMIGO"),
     path("generalrequirements", view=ListGeneralRequirementAPIView.as_view(), name="LISTAR REQUERIMIENTOS GENERALES"),
+    path("<int:pk>/actor", view=ListCreateActorAPIView.as_view(), name="LISTAR Y CREAR ACTORES"),
+    path("actor/<int:pk>", view=RUDActorAPIView.as_view(), name="RUD ACTORES"),
 ]

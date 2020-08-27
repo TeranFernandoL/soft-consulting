@@ -90,3 +90,41 @@ class InviteProjectAPIView(generics.GenericAPIView):
             user_project.save()
             return Response({"detail": "OK"}, status=status.HTTP_200_OK)
         return Response({"detail": "El usuario ya ha sido invitado"}, status=status.HTTP_200_OK)
+
+class ListCreateActorAPIView(generics.ListCreateAPIView):
+    permission_classes = IsAuthenticated,
+    serializer_class = ActorSerializer
+
+    def get_queryset(self):
+        queryset = Actor.objects.filter(project_id=self.kwargs['pk']).order_by('pk')
+        return queryset
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = ActorSerializer(page, many=True, context={'request': request})
+            return self.get_paginated_response(serializer.data)
+
+        serializer =ActorSerializer(queryset, many=True, context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        obj = self.perform_create(serializer)
+        serializer = ActorSerializer(obj, context={'request': request})
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+    def perform_create(self, serializer):
+        obj = get_object_or_404(Project, id=self.kwargs['pk'])
+        return serializer.save(project=obj)
+
+class RUDActorAPIView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ActorSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def get_object(self):
+        obj = get_object_or_404(Actor, id=self.kwargs['pk'])
+        return obj

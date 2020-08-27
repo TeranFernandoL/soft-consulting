@@ -2,7 +2,7 @@ from django.db import models
 from apps.behaviors import TimesStampedModel
 from django.conf import settings
 from enum import Enum
-from apps.projects.models import Project
+from apps.projects.models import Project, Actor
 
 
 # Create your models here.
@@ -10,11 +10,14 @@ from apps.projects.models import Project
 class Requirement(TimesStampedModel):
     name = models.CharField(verbose_name='nombre', max_length=200, blank=True, null=True)
     description = models.TextField(verbose_name='descripcion', blank=True, null=True)
+    descripcion_detallada = models.TextField(verbose_name='descripcion_detallada', blank=True, null=True)
     priority = models.CharField(verbose_name='prioridad', max_length=10, blank=True, null=True)
     cost = models.FloatField(verbose_name='costo', blank=True, null=True)
     creation_date = models.DateTimeField(verbose_name='fecha de creacion', blank=True, null=True)
     show = models.BooleanField(verbose_name='mostrar', default=False)
     projects = models.ManyToManyField(Project, related_name='requeriments', through='Project_Requirement', blank=True)
+    numeracion = models.CharField(verbose_name='numeracion', max_length=30, blank=True, null=True)
+    actor = models.ForeignKey(Actor, related_name='requirements', blank=True, null=True, on_delete=models.CASCADE)
 
     # projects = models.ManyToManyField(projects, related_name='projects', through='Project_Requirement')
 

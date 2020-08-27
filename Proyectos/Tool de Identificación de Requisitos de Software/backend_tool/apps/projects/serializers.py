@@ -15,6 +15,13 @@ from apps.users.models import User
 from apps.serializers import *
 
 
+class ActorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Actor
+        fields = '__all__'
+        read_only_fields = ('id',)
+
+
 class UserProjectSerializer(serializers.ModelSerializer):
     user = RetrieveUserSerializer()
 
@@ -34,11 +41,12 @@ class ProjectSerializer(serializers.ModelSerializer):
 
 class ProjectViewSerializer(CustomSerializer):
     users = RetrieveUserSerializer(many=True)
+    actors = ActorSerializer(many=True)
 
     class Meta:
         model = Project
         fields = '__all__'
-        extra_fields = ['check_general']
+        extra_fields = ['check_general', 'actors']
         read_only_fields = ('id',)
 
 

@@ -30,6 +30,14 @@ class Project(TimesStampedModel):
     rubro = models.CharField('rubro', max_length=30, blank=True, null=True,
                              choices=[(item.name, item.value) for item in type_rubro])
     general_requeriments = models.ManyToManyField(GeneralRequeriments, related_name='projects', blank=True)
+    objetivo = models.TextField('objetivo', blank=True, null=True)
+    alcance = models.TextField('alcance', blank=True, null=True)
+    fuera_alcance = models.TextField('fuera de alcance', blank=True, null=True)
+    vision_general_documento = models.TextField('vision general del documento', blank=True, null=True)
+    perspectiva_producto = models.TextField('perspectiva del producto', blank=True, null=True)
+    objetivos_sistema = models.TextField('objetivos del sistema', blank=True, null=True)
+    restricciones = models.TextField('restricciones', blank=True, null=True)
+    suposiciones_dependencias = models.TextField('suposiciones y dependencias', blank=True, null=True)
 
     def __str__(self):
         return "{} - {}".format(self.id, self.name)
@@ -57,3 +65,12 @@ class UserProject(TimesStampedModel):
 
     class Meta:
         unique_together = ('project', 'user')
+
+class Actor(TimesStampedModel):
+    project = models.ForeignKey(Project, related_name='actors', blank=True, null=True, on_delete=models.CASCADE)
+    name = models.CharField('name', max_length=200, blank=True, null=True)
+    descripcion = models.TextField('descripcion', blank=True, null=True)
+
+    def __str__(self):
+        return "{}-{}".format(self.id, self.name)
+
